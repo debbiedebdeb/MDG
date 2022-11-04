@@ -63,119 +63,92 @@
 
 <br/>
 
-## ❓ 데이터 선정 및 모델링 과정 
-<br/>
-</br>
 
-### 주민센터 & 복지관 선정 이유
+## 👩🏻‍💻 데이터 선정 및 모델링 과정
 
-* [노년기 정보 활용 현황 및 디지털 소외 해소 방안 모색] 논문을 참고해 기존에 존재하는 지역자원을 활용하여 시설을 도입하고자 **노인복지관 및 주민센터**를 선정했습니다. 
+### 1. 분석 데이터 선정 및 이유
 
-* 주민센터 및 복지관의 위치 데이터를 기준으로 시설특성, 인구특성, 주변특성을 반영한 데이터들을 분석해 최적의 입지선정을 진행했습니다.  
-<br/>
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8de73dfd-77c3-41dc-9e9d-75b13fb93264/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T080939Z&X-Amz-Expires=86400&X-Amz-Signature=fa07e4e28e1d7c808cded7f9da82933f8be030d64ad6c3375908530456ab1705&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
 
-### 1. 주최사 제공 데이터
- - 시니어 문화생활 정보(배움터 시설 목록 & 나들이 추천목록)
- - 서울시 내국인 보행 & 비보행 인구데이터 
+**[노년기 정보 활용 현황 및 디지털 소외 해소 방안 모색]** 논문을 참고해 **기존에 존재하는 노인복지관 및 주민센터라는 지역자원을 활용**하여 it 지원시설 및 교육을 확충하고자 주민센터 및 복지관의 위치데이터, 시설특성, 동별 주변특성을 반영한 다양한 데이터들을 분석해 최적의 입지선정을 진행했습니다.
 
-<br/>
+- **주최사 제공 데이터**
+    - 시니어 문화생활 정보 - 배움터 시설 목록 & 나들이 추천목록
+    - 서울시 내국인 보행/비보행 인구데이터
+    
+- **외부 데이터 이용**
+    
+    ✔️ **정형데이터** 
+    
+    - 서울시 주민등록인구 통계 : 시설 이용자 수요 분석을 위해 이용
+    - 서울시 병원 데이터 : 주민센터 & 복지관 내 편의시설 수 파악을 위해 이용
+    - 서울시 공공도서관 현황 데이터 : 주민센터 & 복지관 내 편의시설 수 파악을 위해 이용
+    - **서울시 지하철역주소 데이터** : 교통환경을 고려한 시설 선정 수행을 위해 이용
+    - **서울시 버스정류장 좌표데이터** : 교통환경을 고려한 시설 선정 수행을 위해 이용
+    - **디지털정보지수 :** 행정동별 디지털 역량수준을 파악하기 위해 선정
+        - 2021년 연령대별 디지털 역량 지수 * 행정동 연령대별 인구
+        
+    
+    ✔️ **비정형데이터 ( 셀레니움 )**
+    
+    - **서울시 주민센터 주소 데이터**
+    - **서울시 노인복지관 주소 데이터**
+    
+    ✔️ **데이터에 대한 고민(❌구하지 못한 데이터 ✅ 대체한 데이터)**
+    
+    - **시설 데이터**
+    > ❌ 주민센터 & 복지관의 공실유무   
+    > ☑ (1차) 주민센터에서 운영중인 프로그램 수 & 최대 수용 인원 수 data     
+    > ✅ (2차) 주민센터 & 복지관의 연면적 data  
+      
+    - **인구 특성 데이터**
+    > ❌ 행정동별 시니어의 학력 수준   
+    > ✅ **[2021 연령대별 디지털 역량 수준 * 행정동의 연령대별 인구]**의 총 합 으로 대체 
 
-###2. 외부 데이터
-
-
-✔ 정형데이터
-- 서울시 주민등록인구 통계 : 시설 이용자 수요 분석을 위해 이용
-- 서울시 병원 데이터 : 주민센터 & 복지관 내 편의시설 수 파악을 위해 이용
-- 서울시 공공도서관 현황 데이터 : 주민센터 & 복지관 내 편의시설 수 파악을 위해 이용
-- **서울시 지하철역주소 데이터** : 교통환경을 고려한 시설 선정 수행을 위해 이용
-- **서울시 버스정류장 좌표데이터** : 교통환경을 고려한 시설 선정 수행을 위해 이용
-- **디지털정보지수 :** 행정동별 디지털 역량수준을 파악하기 위해 선정
-    - 2021년 연령대별 디지털 역량 지수 * 행정동 연령대별 인구
-
-
-✔ 비정형데이터 (셀레니움)   
- - **서울시 주민센터 주소 데이터**  
- - **서울시 노인복지관 주소 데이터**  
-</br>
-
-<br/>
-
-###데이터에 대한 고민
-
-  * 분석에 필요하다고 생각했던 데이터들을 다 구하지 못한점이 가장 크게 아쉬웠습니다. 하지만 ‘구하지 못함’에서 끝내지않고, ‘대체 데이터로 무엇이 있을까?’에 대해 팀원들과 여러 생각을 공유하고 논의할 수 있었습니다. 
-
-1. 시설데이터  
-  
-  ❌ 주민센터 & 복지관의 공실유무  
-  ☑ (1차) 주민센터에서 운영중인 프로그램 수 & 최대 수용 인원 수 data  
-  ✅ (2차) 주민센터 & 복지관의 연면적 data  
-  
-2. 인구특성데이터
-  
-  ❌ 행정동별 시니어의 학력 수준    
-  ✅ **[2021 연령대별 디지털 역량 수준 * 행정동의 연령대별 인구]** 의 총 합 으로 대체    
-
-</details>
-
-
-<details>
 
 <br/>
-<summary><b>✅ TimePicker 라이브러리</b></summary>
 
-</br>
+### 2. 데이터 전처리 및 차원축소
 
-✔ 문제상황
-- 디자이너님이 원하는 디자인은 React에서 만들 수 없었고 TimePicker 라이브러리 Custom을 아무리 하여도 원하는 디자인을 만들 수 없었음. post하는 과정에서도 라이브러리는 비효율성이 있음.
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/97c4d25c-8f1c-4720-a174-da8b09e832f6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T080826Z&X-Amz-Expires=86400&X-Amz-Signature=8886640f3297008330de910105a50f50d171fef9995d9691960d5f901f860b98&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
 
-</br>
+- **위치 좌표 변환**
+    - 시설 주변 대중교통시설 및 편의시설(공원, 배움터, 병원, 도서관) 개수 파악을 위해 주소를 이용해 UTMK 좌표계로 변환했습니다. 
+    
+- **정규화**
+    - 최종 테이블의 데이터를 정규형에 가깝게 하기 위해 정규화를 실시했습니다.
 
-✔ 해결방안
-
-- 라이브러리를 제거하고 시간을 코드로 구현하도록 변경함. 라이브러리에 의존하기 보다, 직접 구현을 통해 Custom을 자유롭게 할 수 있는 경험이 됨.
-- 폴더 formBoard / 파일 FormBoard.jsx 197번째줄 시작
 <br/>
 
-<img src="https://user-images.githubusercontent.com/109018926/194243399-bae9186a-ef9a-4740-be4c-f74de6cce9e1.png">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c9e27535-5c4d-4f93-bed3-04a001379514/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T081035Z&X-Amz-Expires=86400&X-Amz-Signature=b2921779ee3ac2b37caa770df9cc67ba92a716444978fcba9960b088c91c891b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
 
-</details>
+- PCA로 차원축소한 결과(설명력)보다 SPCA(alpha = 0.01) 설명력이 더 좋은 이유로차원축소는 SPCA를 이용해 진행했습니다.
 
-<details>
-<summary><b>✅ 게시판 이미지 POST</b></summary>
-
-</br>
-
-✔ 문제상황
-- 게시판 등록시에 텍스트와 이미지를 Formdata에 묶어 전송하였으나 State 500에러 발생
-- 드랍존 라이브러리를 사용해서 오류를 해결하면서 이미지 프리뷰를 추가 구현하고 드래그앤드랍을 구현하려고 했으나 실패함
-
-</br>
-
-✔ 해결방안
-
-- 이미지 또한 Formdata화 시켜야 한다는 사실을 확인함 
-
-</details>
-
-<details>
-<summary><b>✅ 마이페이지 프로필 사진 변경</b></summary>
-
-</br>
-
-✔ 문제상황
-- 우리가 구현하고 있는 기능은 로그인 이후 학교 정보를 받아야 했기 때문에 회원가입, 로그인 시 프로필 사진 추가를 할 수 없었음
-- 따라서 마이페이지의 state에 프로필 사진 변경 기능을 넣어야 했음
-- 발생된 문제는, 프론트에서 기본 프로필을 마이페이지에 등록해둔다고 하여도 게시판 메인 페이지의 프로필 사진에서 사진 이미지가 PATCH 되기전엔 이미지 에러가 발생함
-- PATCH를 한다고 하여도 초반에 에러가 발생된 모습이 USER에게 노출될 수 있었음
-
-</br>
-
-✔ 해결방안
-
-- 백엔드의 S3에 기본 이미지를 탑재해 데이터를 받을 때부터 null값이 아닌 기본 이미지로 받는 방향으로 게시판 이미지의 에러를 해결함
-- 기본 이미지를 GET한 후, 프론트에서 PATCH를 사용하여 프로필 사진을 변경하였고 마이페이지, 게시판 페이지에 사진을 업데이트하여 해결함
-
-</details>
 <br/>
+
+### 3. 모델 & 알고리즘 선정
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/93ca97bb-25c7-49a9-8b78-fa4af64ebbb2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T081039Z&X-Amz-Expires=86400&X-Amz-Signature=ad2c97a24df2bf7b53938098cd22a549e53cc8fddcf6a91bbe7a847bd1e3cb7f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
+
+- SPCA의 주성분으로 2가지 군집화를 진행. 그 중 실루엣 계수와 분산이 좋은 모델을 선정했습니다.
 <br/>
-<img src="https://user-images.githubusercontent.com/109018926/194331117-a466f5ef-7c3e-4c5d-b813-d8b8c334ede6.png">
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a2e121b5-274a-4ef3-8bdc-ef65d1de6954/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T081140Z&X-Amz-Expires=86400&X-Amz-Signature=6119f042aae89447fcd894894817ae99d169e4a87622237b1e41e93276812f69&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
+
+- 군집별의 평균을 상&중&하 로 나누어 점수화. **가장 고득점을 받은 Cluster을 선택**했습니다.
+<br/>
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3ec53267-9614-45bd-8a13-760820218cb7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T081204Z&X-Amz-Expires=86400&X-Amz-Signature=adf2a9669d020ded3479fd74f32915afa6c06a3bf51414e90adf7a24202b4486&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
+
+- [공공시설 입지 선정에 대한 선행 연구](2013)의 **“공공시설을 설치하기 위한 입지선정을 해결 & 거리 활용하는데 있어 P-median 이 최적이다”** 라는 내용에 따라 P-center , UFLP, CFLP 등 다양한 기법 중 P-median 을 선택해 이용했습니다.
+
+<br/>
+
+### 4. 분석 결과
+
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/93702baa-5a39-485e-8f64-8f02973548aa/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T081526Z&X-Amz-Expires=86400&X-Amz-Signature=c67b30441108dbd816b4e30a89cbfe027928af18ad4cc119f8db4120c2ed9f45&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
+
+- 다음과 같은 기준을 통해 최종 선정을 진행했습니다.
+    - 각 구에서 P-median의 결과값인 **총 이동거리**가 가장 낮은 곳 기준으로 1차 선정
+    - **대중교통 > 시설 연면적 > 주변특성 > 유동인구** 우선 순으로 그 수가 높거나, 해당 구의 평균 이상인 시설로 선정
+    - 각 시설 내 IT 지원시설을 설치할 유휴 공간에 대한 데이터가 부재해 **“연면적”데이터로 대체** **시설의 연면적이 크다는 것은 그만큼 추가 시설을 설치할 유휴공간이 있다고 가정*
