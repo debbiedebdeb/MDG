@@ -11,6 +11,8 @@
 
 서울시의  **시니어를 위한 복합 IT 체험존 현황의 경우**, 양천구 1개 & 서초구 5개 시설만이 설치되어있습니다. 2025년까지 체험존을 증대할 계획이라고 밝힌 서울시의 정책에 따라, 추후 IT체험존을 증대한다면, 서울의 어느 구, 어느 복지센터 및 주민센터에 설치해야하는지를 다양한 데이터들을 분석해 최적의 입지 선정을 해보았습니다.
 
+🔗 [발표자료](https://github.com/debbiedebdeb/MDG/blob/a7c1b8b50798c27f049b381a150fd8aacbfcc7de/%EB%AC%B8%ED%99%94%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%99%9C%EC%9A%A9%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C_%EC%8B%9C%EC%86%8C%ED%8C%80_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pdf)
+
 <br/>
 
 ## 🗓 프로젝트 기간 
@@ -24,11 +26,11 @@
 > - 09.06 발표 
 > - 09.16 3등 수상 
 > - 11.10 시상
-> <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/624d1773-b430-491c-813f-b2da4182550c/%EB%AC%B8%ED%99%94%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C_%EC%83%81%EC%9E%A5.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221114%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221114T042301Z&X-Amz-Expires=86400&X-Amz-Signature=b1c3dfd4b00279e79c276bd938f5f654013a285106f59d4ac5392d7c8b688c9c&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22%25EB%25AC%25B8%25ED%2599%2594%25EA%25B2%25BD%25EC%25A7%2584%25EB%258C%2580%25ED%259A%258C%2520%25EC%2583%2581%25EC%259E%25A5.jpg%22&x-id=GetObject">
+
 
 <br/> 
 
-## 🙆 Skills
+## 🔨 Skills
 
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ed30666-82d8-4ef7-b859-870e6f12de8a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221114%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221114T041106Z&X-Amz-Expires=86400&X-Amz-Signature=af1fead109ad56b01394a7903a8fd885a6aae19d26f4010d126487a6d569c05f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject">
 
